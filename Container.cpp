@@ -132,6 +132,22 @@ void Container::setItem(char* itm, vector<Item*> items){
     
 }
 
+void Container::setItem(vector<Item*> items){
+    item.clear();
+
+
+    if(items.size() == 0 ){
+        return;
+    }
+
+    for(int i = 0; i < items.size(); i++){
+        Item* itm = new Item(*(items[i]));
+        item.push_back(itm);
+    }
+}
+
+
+
 void Container::setTrigger(xml_node<>* node){
     // cout<<"Set Trigger\n";
     if(node == NULL){

@@ -35,6 +35,11 @@
   </room>
   <item>
     <name>sword</name>
+    <status>normal</status>
+    <turnon>
+      <print>sword is now high</print>
+      <action>Update sword to high</action>
+    </turnon>
   </item>
   <item>
     <name>note</name>
@@ -60,6 +65,10 @@
     <vulnerability>sword</vulnerability>
     <vulnerability>axe</vulnerability>
     <attack>
+      <condition>
+        <status>high</status>
+        <object>sword</status>
+      </condition>
       <action>Add giant to Main</action>
       <action>s</action>
       <print>Giant scares you away</print>

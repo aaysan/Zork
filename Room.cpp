@@ -163,6 +163,20 @@ void Room::setBorder(vector<Border*> border){
   }
 }
 
+void Room::setItem(vector<Item*> itm){
+    items.clear();
+
+
+    if(itm.size() == 0 ){
+        return;
+    }
+
+    for(int i = 0; i < itm.size(); i++){
+        Item* newitm = new Item(*(itm[i]));
+        items.push_back(newitm);
+    }
+}
+
 void Room::setContainer(char* container, vector<Container*> cnts){
     
     // cout<<"FINAL:             Set Container\n";
@@ -179,6 +193,34 @@ void Room::setContainer(char* container, vector<Container*> cnts){
             containers.push_back(newmem);
             return;
         }
+    }
+}
+
+void Room::setContainer(vector<Container*> container){
+    containers.clear();
+
+    if(container.size() == 0){
+        return;
+    }
+
+    for(int i = 0; i < container.size(); i++){
+        Container* cn = new Container(*container[i]);
+        containers.push_back(cn);
+    }
+}
+
+void Room::setCreature(vector<Creature*> creature){
+    creatures.clear();
+
+    if(creature.size() == 0){
+        cout<<"nothing to push\n";
+        return;
+    }
+
+    for(int i = 0; i < creature.size(); i++){
+        Creature* newcr = new Creature(*(creature[i]));
+        creatures.push_back(newcr);
+        cout<<"pushed"<<endl;
     }
 }
 

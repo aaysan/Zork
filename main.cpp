@@ -55,6 +55,16 @@ int main(int argc, char** argv){
     node = doc.first_node("map")->first_node("container");
     vector<Container*> cnts = getContainerVector(node, items);
 
+    for(int i = 0; i < cnts.size(); i++){
+        cout<<cnts[i]->getName()<<":   ";
+
+        vector<Item*> testtesttest = cnts[i]->getItem();
+        for(int j = 0; j < testtesttest.size(); j++){
+            cout<<testtesttest[j]->getName()<<" ";
+        }
+        cout<<endl;
+    }
+
     // cout<<"CREATURE\n";
     node = doc.first_node("map")->first_node("creature");
     vector<Creature*> creatures = getCreatureVector(node);

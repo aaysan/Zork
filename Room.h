@@ -35,8 +35,11 @@ public:
     void setBorder(xml_node<>* node);
     void setBorder(vector<Border*> border);
     void setContainer(char* container, vector<Container*> cnts);
+    void setContainer(vector<Container*> container);
     void setItem(char* item, vector<Item*> itm);
+    void setItem(vector<Item*> itm);
     void setCreature(char* cr, vector<Creature*> crs);
+    void setCreature(vector<Creature*> creature);
     void setTrigger(xml_node<>* node);
     char* getName();
     const char* getStatus();

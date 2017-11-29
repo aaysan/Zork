@@ -29,6 +29,7 @@ public:
     void setDescription(char* ds);
     void setAccept(char* acpt);
     void setItem(char* itm, vector<Item*> items);
+    void setItem(vector<Item*> items);
     void setTrigger(xml_node<>* node);
     char* getName();
     const char* getStatus();
